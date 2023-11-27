@@ -1,0 +1,16 @@
+<!--pages/pay/index.wxml-->
+<view class="content" v-show="conShow">
+	<view class="text-area">
+		<view class="title title2">{{title}}</view>
+		<view class="title title2">广西蚂蚁视界科技有限公司</view>
+	</view>
+	<view class="text-areas contact-box">
+		<view class="contact">联系我们</view>
+		<view class="title ">联系地址:南宁市西乡塘区明秀西路122号城市碧园B栋B0610号房</view>
+		<view class="title">联系电话:400-4586-7981</view>
+		<view class="title">邮箱地址:251574445@qq.com</view>
+		<!-- 	<view class="">
+				订单号：{{orderNo}}
+			</view> -->
+	</view>
+</view>

@@ -1,0 +1,27 @@
+<view class="cu-custom" style="height:{{isCustomBar?CustomBar:''}}px">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}} {{bgColor}}" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}};background:{{customBarBackgroundColor}};">
+    <view class="action" bindtap="BackPage" wx:if="{{isBack}}" style="margin-left:32rpx">
+      <!-- <image wx:if="{{backIcon}}" class="back-icon" src="{{backIcon}}" /> -->
+      <image
+        wx:if="{{backColor == 'black'}}"
+        class="back-icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAAXNSR0IArs4c6QAAAEJQTFRFAAAAVVVVRkZGQEBAPDw8NjY2Nzc3NDQ0MzMzNjY2MzMzNDQ0MzMzNDQ0MzMzMzMzMzMzMzMzNDQ0MzMzMzMzMzMzmEvQ8AAAABV0Uk5TAAMLEBETF0BBQnKUlsbH1dbp8vX+LaM0cQAAAKNJREFUaN7t2TESglAQBNEVUPyigsrc/6qmljGdQO8BXlsC0VR53m6ub60H+W5ak3XqKP8yJ0nyPLF+coP9PGA/b9jPDPjLj587+/vzOrP+Z4T9q76+vr6+vr6+/rH9DvZrgv1hZf1qsM8H8L8If8j8a4p/aBYsWLBgwYIFCxYOWBjpwvYDxX9h+4mFH4n4mYsf6vipkR9L+bm3qobWhvK8nd4X5gJYqJAUm+sAAAAASUVORK5CYII="
+      />
+      <image
+        wx:if="{{backColor == 'white'}}"
+        class="back-icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAAXNSR0IArs4c6QAAAEJQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////CF/ShgAAABV0Uk5TAAMLEBETF0BBQnKUlsbH1dbp8vX+LaM0cQAAAKNJREFUaN7t2TESglAQBNEVUPyigsrc/6qmljGdQO8BXlsC0VR53m6ub60H+W5ak3XqKP8yJ0nyPLF+coP9PGA/b9jPDPjLj587+/vzOrP+Z4T9q76+vr6+vr6+/rH9DvZrgv1hZf1qsM8H8L8If8j8a4p/aBYsWLBgwYIFCxYOWBjpwvYDxX9h+4mFH4n4mYsf6vipkR9L+bm3qobWhvK8nd4X5gJYqJAUm+sAAAAASUVORK5CYII="
+      />
+      <slot name="back"></slot>
+    </view>
+    <slot name="home"></slot>
+    <view class="action border-custom" wx:if="{{isCustom}}" style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)">
+      <text class="cuIcon-back" bindtap="BackPage"></text>
+      <text class="cuIcon-homefill" bindtap="toHome"></text>
+    </view>
+    <view class="content" style="top:{{StatusBar}}px">
+      <slot name="content"></slot>
+    </view>
+    <slot name="right"></slot>
+  </view>
+</view>

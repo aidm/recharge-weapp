@@ -1,0 +1,61 @@
+/* colorui/components/cu-custom.wxss */
+/* @import './main.wxss'; */
+/* @import './icon.wxss'; */
+.backpic {
+  margin-top: 10rpx;
+  width: 20rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+.back-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+view{
+    box-sizing: border-box;
+}
+.cu-custom {
+    display: block;
+    position: relative;
+}
+.cu-custom .cu-bar {
+    min-height: 0px;
+    padding-right: 220rpx;
+    box-shadow: 0rpx 0rpx 0rpx;
+    z-index: 9999;
+}
+.cu-bar.fixed, .nav.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1024;
+    /* box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1); */
+}
+.cu-bar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 100rpx;
+    justify-content: space-between;
+}
+.cu-custom .cu-bar .content {
+    width: calc(100% - 440rpx);
+}
+.cu-bar .content {
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 340rpx);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    cursor: none;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

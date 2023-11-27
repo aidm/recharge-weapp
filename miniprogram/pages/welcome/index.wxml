@@ -1,0 +1,17 @@
+<!--pages/welcome/index.wxml-->
+<view class="goods">
+	<view class="goods-item" wx:for="{{list}}" wx:key="index" bindtap="goDetail" data-item="{{item}}" style="background-image: url(../../images/goods-bg.png);">
+		<view class="goods-item-header">
+
+		</view>
+		<view class="goods-item-body">
+			<view class="goods-item-title">goods-item-title</view>
+			<view class="goods-item-market-price">市场价<text class="price">30</text> </view>
+			<view class="goods-item-price">
+				<text class="unit">¥</text> 19.9
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="divider">- 没有更多了 -</view>

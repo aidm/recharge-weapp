@@ -1,0 +1,36 @@
+<!--pages/detail/index.wxml-->
+<navbar isBack backColor="white">
+	<view class="navbar-title" slot="content">
+		详情
+	</view>
+</navbar>
+<view class="banner" style="margin-top: -{{CustomBar}}px;">
+	<view class="swiper-wrapper">
+		<swiper class="swiper" indicator-active-color='#fff' indicator-dots="true" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#cccccc" indicator-active-color="#CB333B" previous-margin="{{previousMargin}}rpx" next-margin="{{nextMargin}}rpx" bindchange="handleChange" circular>
+			<block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
+				<swiper-item class="swiper-items {{(previousMargin!=''||nextMargin!='')&&current==index?'active':''}}">
+					<image class="swiper-image {{previousMargin!=''||nextMargin!=''?'swiper-image-margin':'swiper-image-nomargin'}}" src="{{item.picture?item.picture:item.pic_url?item.pic_url:item}}" data-info="{{item}}" bindtap="toRouter"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<view class="goods-card price-box">
+	<view class="flex-center">
+		<view class="goods-price"><text class="unit">¥</text>1.99</view>
+		<view class="num">100</view>
+	</view>
+	<view class="goods-title mt-23">千禧圣女果约200g</view>
+</view>
+<view class="goods-card">
+	<view class="goods-title">购买流程</view>
+	<view class="flex-center mt-23">
+		<view class="item">
+			
+		</view>
+	</view>
+</view>
+
+<view class="footer-btn">
+	立即购买
+</view>

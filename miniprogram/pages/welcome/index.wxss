@@ -1,0 +1,60 @@
+/* pages/welcome/index.wxss */
+page{
+	background-color: #F7F7F7;
+	padding: 30rpx;
+}
+.price{
+	color: #FF3043;
+}
+.goods-item{
+	margin-right: 20rpx;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 335rpx;
+	height: 474rpx;
+	overflow: hidden;
+}
+.goods-item-header{
+	margin: 20rpx;
+	background-color: aquamarine;
+	min-height: 250rpx;
+	/* width: 100%; */
+	border-radius: 10rpx;
+}
+.goods-item-body{
+	padding: 20rpx;
+	line-height: 1.6;
+}
+.goods-item-title{
+	font-size: 30rpx;
+	font-family: PingFangSC, PingFang SC;
+	font-weight: 500;
+	color: #333333;
+	/* line-height: 42rpx; */
+}
+.goods-item-price, .goods-item-unit{
+	font-size: 36rpx;
+	font-family: DIN, DIN;
+	font-weight: bold;
+	color: #FF3043;
+	/* line-height: 31rpx; */
+}
+.unit{
+	font-size: 26rpx;
+}
+.goods-item-market-price{
+	font-size: 24rpx;
+	font-family: PingFangSC, PingFang SC;
+	font-weight: 400;
+	color: #999999;
+	/* line-height: 33rpx; */
+}
+.divider{
+	font-size: 32rpx;
+	font-family: PingFangSC, PingFang SC;
+	font-weight: 400;
+	color: #999999;
+	line-height: 45rpx;
+	text-align: center;
+	margin-top: 37rpx;
+}
